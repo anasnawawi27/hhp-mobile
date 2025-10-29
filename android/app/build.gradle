@@ -86,9 +86,9 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace 'com.anas27.hhpmobile'
+    namespace 'com.anas27.gapmobile'
     defaultConfig {
-        applicationId 'com.anas27.hhpmobile'
+        applicationId 'com.anas27.gapmobile'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

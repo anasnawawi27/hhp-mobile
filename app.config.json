@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "HHP Mobile",
-    "slug": "hhp-mobile",
+    "name": "GAP Mobile",
+    "slug": "gap-mobile",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -13,19 +13,17 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.anas27.hhpmobile"
+      "bundleIdentifier": "com.anas27.gapmobile"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.anas27.hhpmobile"
+      "package": "com.anas27.gapmobile"
     }
   }
 }

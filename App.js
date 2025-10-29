@@ -20,16 +20,18 @@ const App = () => {
   useEffect(() => {
     const backAction = () => {
       if (webViewRef.current) {
-        webViewRef.current.evaluateJavaScript("window.history.length").then((historyLength) => {
-          if (historyLength > 1) {
-            webViewRef.current.goBack();
-          } else {
-            Alert.alert("Keluar", "Yakin ingin keluar dari aplikasi?", [
-              { text: "Batal", style: "cancel" },
-              { text: "Keluar", onPress: () => BackHandler.exitApp() },
-            ]);
-          }
-        });
+        webViewRef.current
+          .evaluateJavaScript("window.history.length")
+          .then((historyLength) => {
+            if (historyLength > 1) {
+              webViewRef.current.goBack();
+            } else {
+              Alert.alert("Keluar", "Yakin ingin keluar dari aplikasi?", [
+                { text: "Batal", style: "cancel" },
+                { text: "Keluar", onPress: () => BackHandler.exitApp() },
+              ]);
+            }
+          });
         return true;
       }
       return false;
@@ -65,9 +67,18 @@ const App = () => {
           <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
         }
       >
-        <WebView
+        {/* <WebView
           ref={webViewRef}
           source={{ uri: "https://app.hhproperti.com/" }}
+          javaScriptEnabled={true}
+          domStorageEnabled={true}
+          onLoadStart={() => setLoading(true)}
+          onLoad={() => setLoading(false)}
+          style={StyleSheet.absoluteFillObject} // WebView full screen tanpa padding
+        /> */}
+        <WebView
+          ref={webViewRef}
+          source={{ uri: "https://app.gamaarcadia.com/" }}
           javaScriptEnabled={true}
           domStorageEnabled={true}
           onLoadStart={() => setLoading(true)}

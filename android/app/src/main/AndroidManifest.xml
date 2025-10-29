@@ -25,6 +25,7 @@
         <category android:name="android.intent.category.DEFAULT"/>
         <category android:name="android.intent.category.BROWSABLE"/>
         <data android:scheme="com.anas27.hhpmobile"/>
+        <data android:scheme="com.anas27.gapmobile"/>
       </intent-filter>
     </activity>
   </application>
